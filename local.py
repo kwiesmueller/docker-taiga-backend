@@ -10,7 +10,7 @@ SECRET_KEY = "theveryultratopsecretkey"
 
 DEBUG = False
 TEMPLATE_DEBUG = False
-PUBLIC_REGISTER_ENABLED = True
+PUBLIC_REGISTER_ENABLED = False
 
 DEFAULT_FROM_EMAIL = "no-reply@benjamin-borbe.de"
 SERVER_EMAIL = DEFAULT_FROM_EMAIL
