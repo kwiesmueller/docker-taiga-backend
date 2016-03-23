@@ -1,5 +1,19 @@
 # Taiga Backend
 
+## Initialize Database
+
+```
+git clone -b stable --single-branch https://github.com/taigaio/taiga-back.git taiga
+cp local.py taiga/settings/local.py
+cd taiga
+python manage.py migrate --noinput
+python manage.py loaddata initial_user
+python manage.py loaddata initial_project_templates
+python manage.py loaddata initial_role
+python manage.py compilemessages
+python manage.py collectstatic --noinput
+```
+
 ## Copyright and license
 
     Copyright (c) 2016, Benjamin Borbe <bborbe@rocketnews.de>
