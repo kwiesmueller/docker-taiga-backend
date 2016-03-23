@@ -1,10 +1,10 @@
 from .common import *
 
-MEDIA_URL = "https://www.benjamin-borbe.de/taiga/media/"
-STATIC_URL = "https://www.benjamin-borbe.de/taiga/static/"
-ADMIN_MEDIA_PREFIX = "https://www.benjamin-borbe.de/taiga/static/admin/"
-SITES["front"]["scheme"] = "https"
-SITES["front"]["domain"] = "www.benjamin-borbe.de"
+MEDIA_URL = "http://taiga.benjamin-borbe.de/media/"
+STATIC_URL = "http://taiga.benjamin-borbe.de/static/"
+ADMIN_MEDIA_PREFIX = "http://taiga.benjamin-borbe.de/static/admin/"
+SITES["front"]["scheme"] = "http"
+SITES["front"]["domain"] = "taiga.benjamin-borbe.de"
 
 SECRET_KEY = "theveryultratopsecretkey"
 
