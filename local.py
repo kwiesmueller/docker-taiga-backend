@@ -7,7 +7,7 @@ ADMIN_MEDIA_PREFIX = "http://taiga.benjamin-borbe.de/static/admin/"
 SITES["front"]["scheme"] = "http"
 SITES["front"]["domain"] = "taiga.benjamin-borbe.de"
 
-SECRET_KEY = "theveryultratopsecretkey"
+SECRET_KEY = '{{secret_key}}'
 
 DEBUG = False
 TEMPLATE_DEBUG = False
@@ -19,19 +19,19 @@ SERVER_EMAIL = DEFAULT_FROM_EMAIL
 DATABASES = {
 	'default': {
 		'ENGINE': 'transaction_hooks.backends.postgresql_psycopg2',
-		'NAME': 'taiga',
-		'USER': 'taiga',
-		'PASSWORD': 'Bri72GuWPpaly1qu',
-		'HOST': 'taiga-postgres.default.svc.cluster.local',
-		'PORT': '5432',
+		'NAME': '{{database_name}}',
+		'USER': '{{database_user}}',
+		'PASSWORD': '{{database_password}}',
+		'HOST': '{{database_hostname}}',
+		'PORT': '{{database_port}}',
 	}
 }
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = False
-EMAIL_HOST = "smtp.default.svc.cluster.local"
-EMAIL_PORT = 25
+EMAIL_HOST = '{{smtp_host}}'
+EMAIL_PORT = '{{smtp_port}}'
 EMAIL_HOST_USER = ""
 EMAIL_HOST_PASSWORD = ""
 

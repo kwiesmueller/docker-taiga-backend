@@ -14,10 +14,14 @@ WORKDIR /taiga
 #RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
-ADD local.py /taiga/settings/local.py
+ADD local.py /taiga/settings/local.py.template
 
 RUN python manage.py compilemessages
 RUN python manage.py collectstatic --noinput
 
 EXPOSE 8000
+
+COPY entrypoint.sh /usr/local/bin/
+ENTRYPOINT ["entrypoint.sh"]
+
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
