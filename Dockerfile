@@ -11,7 +11,7 @@ RUN git clone -b stable --single-branch https://github.com/taigaio/taiga-back.gi
 ENV HOME /taiga
 WORKDIR /taiga
 
-RUN pip install --upgrade pip
+#RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
 ADD local.py /taiga/settings/local.py
