@@ -2,6 +2,8 @@
 
 set -e
 
+default_from=${default_from:-'smtp@benjamin-borbe.de'}
+
 database_host=${DATABASE_HOST:-'taiga-postgres.default.svc.cluster.local'}
 database_name=${DATABASE_NAME:-'taiga'}
 database_user=${DATABASE_USER:-'taiga'}

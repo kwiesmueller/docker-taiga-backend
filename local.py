@@ -13,7 +13,7 @@ DEBUG = False
 TEMPLATE_DEBUG = False
 PUBLIC_REGISTER_ENABLED = False
 
-DEFAULT_FROM_EMAIL = "smtp@benjamin-borbe.de"
+DEFAULT_FROM_EMAIL = '{{default_from}}'
 SERVER_EMAIL = DEFAULT_FROM_EMAIL
 
 DATABASES = {
@@ -22,7 +22,7 @@ DATABASES = {
 		'NAME': '{{database_name}}',
 		'USER': '{{database_user}}',
 		'PASSWORD': '{{database_password}}',
-		'HOST': '{{database_hostname}}',
+		'HOST': '{{database_host}}',
 		'PORT': '{{database_port}}',
 	}
 }
