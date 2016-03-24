@@ -1,4 +1,5 @@
 from .common import *
+import os
 
 MEDIA_URL = "http://taiga.benjamin-borbe.de/media/"
 STATIC_URL = "http://taiga.benjamin-borbe.de/static/"
@@ -32,6 +33,22 @@ EMAIL_HOST = "smtp.default.svc.cluster.local"
 EMAIL_PORT = 25
 EMAIL_HOST_USER = ""
 EMAIL_HOST_PASSWORD = ""
+
+LOGGING = {
+	'version': 1,
+	'disable_existing_loggers': False,
+	'handlers': {
+		'console': {
+			'class': 'logging.StreamHandler',
+		},
+	},
+	'loggers': {
+		'django': {
+			'handlers': ['console'],
+			'level': os.getenv('DJANGO_LOG_LEVEL', 'INFO'),
+		},
+	},
+}
 
 # Uncomment and populate with proper connection parameters
 # for enable github login/singin.
