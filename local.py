@@ -13,7 +13,7 @@ DEBUG = False
 TEMPLATE_DEBUG = False
 PUBLIC_REGISTER_ENABLED = False
 
-DEFAULT_FROM_EMAIL = "no-reply@benjamin-borbe.de"
+DEFAULT_FROM_EMAIL = "smtp@benjamin-borbe.de"
 SERVER_EMAIL = DEFAULT_FROM_EMAIL
 
 DATABASES = {
@@ -29,6 +29,7 @@ DATABASES = {
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_USE_TLS = False
+EMAIL_USE_SSL = False
 EMAIL_HOST = "smtp.default.svc.cluster.local"
 EMAIL_PORT = 25
 EMAIL_HOST_USER = ""
