@@ -23,4 +23,7 @@ done
 echo "create local.py"
 cat /taiga/settings/local.py.template | sed -e "$sed_script" > /taiga/settings/local.py
 
+echo "create static"
+cd /taiga && python manage.py collectstatic --noinput
+
 exec "$@"
