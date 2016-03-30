@@ -1,11 +1,11 @@
 from .common import *
 import os
 
-MEDIA_URL = "http://taiga.benjamin-borbe.de/media/"
-STATIC_URL = "http://taiga.benjamin-borbe.de/static/"
-ADMIN_MEDIA_PREFIX = "http://taiga.benjamin-borbe.de/static/admin/"
+MEDIA_URL = "http://{{public_hostname}}/media/"
+STATIC_URL = "http://{{public_hostname}}/static/"
+ADMIN_MEDIA_PREFIX = "http://{{public_hostname}}/static/admin/"
 SITES["front"]["scheme"] = "http"
-SITES["front"]["domain"] = "taiga.benjamin-borbe.de"
+SITES["front"]["domain"] = "{{public_hostname}}"
 
 SECRET_KEY = '{{secret_key}}'
 
