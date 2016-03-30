@@ -9,7 +9,7 @@ build:
 run:
 	docker run -h example.com -p 8000:8000 bborbe/taiga-backend:latest
 
-bash:
+shell:
 	docker run -i -t bborbe/taiga-backend:latest /bin/bash
 
 upload:
