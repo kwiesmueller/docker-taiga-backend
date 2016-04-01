@@ -6,13 +6,13 @@ public_hostname=${PUBLIC_HOSTNAME:-'taiga.benjamin-borbe.de'}
 
 default_from=${default_from:-'smtp@benjamin-borbe.de'}
 
-database_host=${DATABASE_HOST:-'taiga-postgres.default.svc.cluster.local'}
+database_host=${DATABASE_HOST:-'taiga-postgres'}
 database_name=${DATABASE_NAME:-'taiga'}
 database_user=${DATABASE_USER:-'taiga'}
 database_password=${DATABASE_PASSWORD:-'Bri72GuWPpaly1qu'}
 database_port=${DATABASE_PORT:-'5432'}
 
-smtp_host=${SMTP_HOST:-'smtp.default.svc.cluster.local'}
+smtp_host=${SMTP_HOST:-'smtp'}
 smtp_port=${SMTP_PORT:-'25'}
 
 secret_key=${SECRET_KEY:-'Z2nwo3KDU24Qie7jX2uStFuukaJ92JFO'}
