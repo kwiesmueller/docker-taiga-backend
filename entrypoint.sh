@@ -28,4 +28,5 @@ cat /taiga/settings/local.py.template | sed -e "$sed_script" > /taiga/settings/l
 echo "create static"
 cd /taiga && python manage.py collectstatic --noinput
 
+echo "exec $@"
 exec "$@"
