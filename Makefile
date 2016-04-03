@@ -4,7 +4,7 @@ clean:
 	docker rmi bborbe/taiga-backend
 
 build:
-	docker build --rm=true -t bborbe/taiga-backend .
+	docker build --no-cache --rm=true -t bborbe/taiga-backend .
 
 run:
 	docker run -h example.com -p 8000:8000 bborbe/taiga-backend:latest
