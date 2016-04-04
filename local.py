@@ -1,5 +1,5 @@
-from .common import *
 import os
+from .common import *
 
 MEDIA_URL = "http://{{public_hostname}}/media/"
 STATIC_URL = "http://{{public_hostname}}/static/"
@@ -18,12 +18,15 @@ SERVER_EMAIL = DEFAULT_FROM_EMAIL
 
 DATABASES = {
 	'default': {
-		'ENGINE': 'transaction_hooks.backends.postgresql_psycopg2',
+		'ENGINE': 'django.db.backends.postgresql',
 		'NAME': '{{database_name}}',
 		'USER': '{{database_user}}',
 		'PASSWORD': '{{database_password}}',
 		'HOST': '{{database_host}}',
 		'PORT': '{{database_port}}',
+		'OPTIONS': {
+			'timeout': 60,
+		}
 	}
 }
 
@@ -46,7 +49,7 @@ LOGGING = {
 	'loggers': {
 		'django': {
 			'handlers': ['console'],
-			'level': os.getenv('DJANGO_LOG_LEVEL', 'INFO'),
+			'level': os.getenv('DJANGO_LOG_LEVEL', 'DEBUG'),
 		},
 	},
 }

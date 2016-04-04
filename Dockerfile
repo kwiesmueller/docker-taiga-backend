@@ -3,7 +3,7 @@ MAINTAINER Benjamin Borbe <bborbe@rocketnews.de>
 
 RUN set -x \
     && apt-get update --quiet \
-    && apt-get install --quiet --yes --no-install-recommends gettext \
+    && apt-get install --quiet --yes --no-install-recommends gettext postgresql \
     && apt-get autoremove --yes \
     && apt-get clean
 
