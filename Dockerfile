@@ -2,10 +2,11 @@ FROM python:3.4.3
 MAINTAINER Benjamin Borbe <bborbe@rocketnews.de>
 
 RUN set -x \
-    && apt-get update --quiet \
-    && apt-get install --quiet --yes --no-install-recommends gettext postgresql \
-    && apt-get autoremove --yes \
-    && apt-get clean
+	&& apt-get update --quiet \
+	&& apt-get upgrade --quiet --yes \
+	&& apt-get install --quiet --yes --no-install-recommends gettext postgresql \
+	&& apt-get autoremove --yes \
+	&& apt-get clean
 
 RUN git clone -b stable --single-branch https://github.com/taigaio/taiga-back.git /taiga
 
