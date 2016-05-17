@@ -3,6 +3,7 @@
 set -e
 
 public_hostname=${PUBLIC_HOSTNAME:-'taiga.benjamin-borbe.de'}
+public_register_enabled=${PUBLIC_REGISTER_ENABLED:-'False'}
 
 default_from=${default_from:-'smtp@benjamin-borbe.de'}
 

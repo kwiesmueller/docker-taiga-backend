@@ -11,7 +11,7 @@ SECRET_KEY = '{{secret_key}}'
 
 DEBUG = False
 TEMPLATE_DEBUG = False
-PUBLIC_REGISTER_ENABLED = False
+PUBLIC_REGISTER_ENABLED = {{public_register_enabled}}
 
 DEFAULT_FROM_EMAIL = '{{default_from}}'
 SERVER_EMAIL = DEFAULT_FROM_EMAIL
