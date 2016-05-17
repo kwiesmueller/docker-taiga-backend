@@ -19,7 +19,7 @@ smtp_port=${SMTP_PORT:-'25'}
 secret_key=${SECRET_KEY:-'Z2nwo3KDU24Qie7jX2uStFuukaJ92JFO'}
 
 sed_script=""
-for var in public_hostname default_from database_host database_name database_user database_password database_port smtp_host smtp_port secret_key; do
+for var in public_register_enabled public_hostname default_from database_host database_name database_user database_password database_port smtp_host smtp_port secret_key; do
   sed_script+="s,{{$var}},${!var},g;"
 done
 
