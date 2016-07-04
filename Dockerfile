@@ -2,11 +2,11 @@ FROM python:3.4.3
 MAINTAINER Benjamin Borbe <bborbe@rocketnews.de>
 
 RUN set -x \
-	&& apt-get update --quiet \
-	&& apt-get upgrade --quiet --yes \
-	&& apt-get install --quiet --yes --no-install-recommends gettext postgresql \
-	&& apt-get autoremove --yes \
-	&& apt-get clean
+	&& DEBIAN_FRONTEND=noninteractive apt-get update --quiet \
+	&& DEBIAN_FRONTEND=noninteractive apt-get upgrade --quiet --yes \
+	&& DEBIAN_FRONTEND=noninteractive apt-get install --quiet --yes --no-install-recommends gettext postgresql \
+	&& DEBIAN_FRONTEND=noninteractive apt-get autoremove --yes \
+	&& DEBIAN_FRONTEND=noninteractive apt-get clean
 
 RUN git clone -b stable --single-branch https://github.com/taigaio/taiga-back.git /taiga
 
