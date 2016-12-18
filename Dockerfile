@@ -18,7 +18,7 @@ RUN wget https://bootstrap.pypa.io/ez_setup.py -O - | python
 RUN pip install html5lib==1.0b8
 RUN pip install --no-cache-dir -r requirements.txt
 
-ADD local.py /taiga/settings/local.py.template
+COPY local.py /taiga/settings/local.py.template
 
 RUN python manage.py compilemessages
 
