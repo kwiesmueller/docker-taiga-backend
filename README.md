@@ -3,7 +3,7 @@
 ## Initialize Database
 
 ```
-git clone -b stable --single-branch https://github.com/taigaio/taiga-back.git taiga
+git clone -b stable --single-branch --depth 1 https://github.com/taigaio/taiga-back.git taiga
 cp local.py taiga/settings/local.py
 cd taiga
 python manage.py migrate --noinput

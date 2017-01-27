@@ -9,7 +9,7 @@ RUN set -x \
 	&& DEBIAN_FRONTEND=noninteractive apt-get autoremove --yes \
 	&& DEBIAN_FRONTEND=noninteractive apt-get clean
 
-RUN git clone -b stable --single-branch https://github.com/taigaio/taiga-back.git /taiga
+RUN git clone -b stable --single-branch --depth 1 https://github.com/taigaio/taiga-back.git /taiga
 
 ENV HOME /taiga
 WORKDIR /taiga
