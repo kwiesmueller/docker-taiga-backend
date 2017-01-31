@@ -1,10 +1,10 @@
 import os
 from .common import *
 
-MEDIA_URL = "http://{{public_hostname}}/media/"
-STATIC_URL = "http://{{public_hostname}}/static/"
-ADMIN_MEDIA_PREFIX = "http://{{public_hostname}}/static/admin/"
-SITES["front"]["scheme"] = "http"
+MEDIA_URL = "https://{{public_hostname}}/media/"
+STATIC_URL = "https://{{public_hostname}}/static/"
+ADMIN_MEDIA_PREFIX = "https://{{public_hostname}}/static/admin/"
+SITES["front"]["scheme"] = "https"
 SITES["front"]["domain"] = "{{public_hostname}}"
 
 SECRET_KEY = '{{secret_key}}'
