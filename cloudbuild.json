@@ -9,7 +9,7 @@
   "steps": [{
     "name": "gcr.io/cloud-builders/docker",
     "args": [
-      "build", "-t", "--build-arg VERSION=latest", "gcr.io/playnet-gce/docker-taiga-backend", "."
+      "build", "-t", "gcr.io/playnet-gce/docker-taiga-backend", "."
     ]
   }],
   "images": [

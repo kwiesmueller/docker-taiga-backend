@@ -1,6 +1,6 @@
 FROM python:3.5
 MAINTAINER Benjamin Borbe <bborbe@rocketnews.de>
-ENV VERSION
+ENV VERSION latest
 
 RUN set -x \
 	&& DEBIAN_FRONTEND=noninteractive apt-get update --quiet \
