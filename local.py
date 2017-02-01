@@ -28,12 +28,12 @@ DATABASES = {
 }
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_USE_TLS = False
-EMAIL_USE_SSL = False
+EMAIL_USE_TLS = {{smtp_tls}}
+EMAIL_USE_SSL = {{smtp_tls}}
 EMAIL_HOST = '{{smtp_host}}'
 EMAIL_PORT = '{{smtp_port}}'
-EMAIL_HOST_USER = ""
-EMAIL_HOST_PASSWORD = ""
+EMAIL_HOST_USER = "{{smtp_user}}"
+EMAIL_HOST_PASSWORD = "{{smtp_password}}"
 
 LOGGING = {
 	'version': 1,
